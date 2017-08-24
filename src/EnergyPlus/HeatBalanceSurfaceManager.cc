@@ -5678,7 +5678,8 @@ CalcHeatBalanceInsideSurf( Optional_int_const ZoneToResimulate ) // if passed in
 						TDDPipe( PipeNum ).HeatLoss = WinHeatLossRep( SurfNum );
 
 					} else { // Regular window
-						if ( InsideSurfIterations == 0 ) { // Do windows only once
+						//if ( InsideSurfIterations == 0 ) { // Do windows only once
+						if ( true ) { // Do windows only once
 							if ( SurfaceWindow( SurfNum ).StormWinFlag == 1 ) ConstrNum = surface.StormWinConstruction;
 							// Get outside convection coeff for exterior window here to avoid calling
 							// InitExteriorConvectionCoeff from CalcWindowHeatBalance, which avoids circular reference
